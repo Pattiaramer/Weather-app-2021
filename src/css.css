@@ -1,0 +1,93 @@
+ul {
+  list-style-type: none;
+}
+
+a:link {
+  color: #443d3b;
+  text-decoration: none;
+}
+
+h1 {
+  color: #f7f6f2;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+  font-size: 200px;
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  width: 95%;
+}
+.background {
+  background-color: #1e3163;
+}
+
+.weather-app {
+  background-color: #4b6587;
+  border: 2px solid #3d56b2;
+  padding: 15px;
+  margin: 35px auto;
+  border-radius: 10px;
+  max-width: 900px;
+}
+
+.current-location-button {
+  background-color: #1597e5;
+  color: #f7f6f2;
+  border: none;
+  border: 2px solid #1597e5;
+}
+
+.weather-icon {
+  display: inline-block;
+  height: 60px;
+  margin-top: unset;
+  vertical-align: top;
+  width: 60px;
+}
+.current-temp {
+  color: #f7f6f2;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+  display: inline-block;
+  font-size: 44px;
+  line-height: 48px;
+  vertical-align: top;
+  margin-left: 25px;
+}
+
+.units {
+  color: #f7f6f2;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 6px;
+  padding-left: 6px;
+  vertical-align: top;
+}
+
+.pre-hum-wind {
+  color: #f0e5cf;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 4px;
+  margin-left: -100px;
+}
+
+.city-date {
+  display: inline-block;
+  vertical-align: top;
+  width: 95%;
+  text-align: right;
+}
+
+.cities-name {
+  color: #f7f6f2;
+  font-size: 22px;
+  line-height: 26px;
+  font-family: Google Sans, Roboto, arial, sans-serif;
+}
+
+.day-of-the-week {
+  color: #f0e5cf;
+  font-size: 16px;
+  line-height: 20px;
+}

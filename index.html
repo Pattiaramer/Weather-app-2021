@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css.css" />
+  </head>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+    crossorigin="anonymous"
+  />
+  <!--Axios-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  
+  <title>Patti's Weather App</title>
+  <body class="background">
+    <div class="container">
+      <div class="weather-app">
+        <!--This is the search bar-->
+        <form id="search-form">
+        <div id="search" class="input-group mb-3">
+          <input
+            type="text" id="searching"
+            class="form-control"
+            placeholder="Type a city..."
+            aria-label="City Name"
+            aria-describedby="button-addon2"
+            
+          />
+          <button
+            class="btn btn-primary"
+            type="button"
+            id="button-addon2"
+            
+          >
+            Search
+          </button>
+          
+          <button class="current-location-button" id="current-location-button" type="button">
+            Current Location
+          </button>
+        </div>
+        </form>
+        </br>
+        <!--Top Row-->
+        <div class="row">
+          <div class="col-3">
+            <div class="clearfix">
+              <div class="float-left">
+                  <span class="current-temp" id="temp-num"></span
+                  ><span class="units">°C</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <ul class="pre-hum-wind">
+                <li>Humidity: <span id="humidity"> </span></li>
+                <li >Wind: <span id="wind-speed"> </span> </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h1 id="users-city" class="cities-name" ></h1>
+              <ul class="city-date">
+                <li class="day-of-the-week" id="current-time"></li>
+                <li id="description" class="day-of-the-week"></li>
+              </ul>
+            </div>
+          </div>
+        <!--Second Row/Days of the week-->
+        <div class="row">
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--Images of the weather-->
+
+
+
+
+
+    <!--Temp of the days -->
+
+
+
+
+  <script src="index.js"></script>
+  </body>
+</html>
+
