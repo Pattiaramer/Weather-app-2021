@@ -1,10 +1,10 @@
-ul {
-  list-style-type: none;
+a:link {
+  color: #f0e5cf;
+  text-decoration: none;
 }
 
-a:link {
-  color: #443d3b;
-  text-decoration: none;
+ul {
+  list-style-type: none;
 }
 
 h1 {
@@ -90,4 +90,9 @@ h1 {
   color: #f0e5cf;
   font-size: 16px;
   line-height: 20px;
+}
+
+.open-source {
+  margin-left: 21%;
+  color: #f7f6f2;
 }
