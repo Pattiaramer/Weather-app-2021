@@ -3,6 +3,11 @@ a:link {
   text-decoration: none;
 }
 
+a:hover {
+  color: #1e3163;
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
 }
