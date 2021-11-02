@@ -18,27 +18,24 @@ let days = day[time.getDay()];
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `${days} ${hour} : ${min}`;
 
-//Changing Celsius to Ferinheight
-
-/*let ferinheight = document.querySelector("#fer");
-ferinheight.addEventListener("click", tempInFer);
-
-let celsius = document.querySelector("#cel");
-celsius.addEventListener("click", tempInCel);*/
-
 //Entering User's Search
 
 function showWeather(response) {
   document.querySelector("#users-city").innerHTML = response.data.name;
-  document.querySelector("#temp-num").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  celsiusTemperature = response.data.main.temp;
+
+  document.querySelector("#temp-num").innerHTML =
+    Math.round(celsiusTemperature);
+
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
 
   document
     .querySelector("#icon")
@@ -64,10 +61,35 @@ function handleSubmit(event) {
   place(city);
 }
 
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-num");
+  // remove the active class the celsius link
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp-num");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+place("New York");
+
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+//Changing Celsius to Ferinheight
 
-place("New York");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);

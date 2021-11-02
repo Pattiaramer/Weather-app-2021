@@ -1,5 +1,5 @@
 a:link {
-  color: #f0e5cf;
+  color: #f7f6f2;
   text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ h1 {
   font-size: 12px;
   line-height: 18px;
   padding-top: 4px;
-  margin-left: -90px;
+  margin-left: -75px;
 }
 
 .city-date {
@@ -81,6 +81,15 @@ h1 {
   font-size: 22px;
   line-height: 26px;
   font-family: Google Sans, Roboto, arial, sans-serif;
+}
+
+.clearfix .active {
+  color: #f0e5cf;
+  cursor: default;
+}
+
+.clearfix .active:hover {
+  text-decoration: none;
 }
 
 .open-source {
