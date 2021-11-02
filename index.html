@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="src/css.css" />
+    <link rel="stylesheet" href="src/css.css" />
   </head>
 
   <link
@@ -16,61 +16,56 @@
   <!--Axios-->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-  
   <title>Patti's Weather App</title>
   <body class="background">
     <div class="container">
       <div class="weather-app">
         <!--This is the search bar-->
-        <form id="search-form">
-        <div id="search" class="input-group mb-3">
-          <input
-            type="text" id="searching"
-            class="form-control"
-            placeholder="Type a city..."
-            aria-label="City Name"
-            aria-describedby="button-addon2"
-            
-          />
-          <button
-            class="btn btn-primary"
-            type="button"
-            id="button-addon2"
-            
-          >
-            Search
-          </button>
-          
-          <button class="current-location-button" id="current-location-button" type="button">
-            Current Location
-          </button>
-        </div>
+
+        <form id="search-form" class="mb-5">
+          <div id="search" class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                id="searching"
+                class="form-control"
+                placeholder="Type a city..."
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
         </form>
-        </br>
+
         <!--Top Row-->
         <div class="row">
           <div class="col-3">
             <div class="clearfix">
               <div class="float-left">
-                  <span class="current-temp" id="temp-num"></span
-                  ><span class="units">°C</span>
-                </div>
+                <span class="current-temp" id="temp-num"></span
+                ><span class="units">°C</span>
               </div>
             </div>
-            <div class="col-3">
-              <ul class="pre-hum-wind">
-                <li>Humidity: <span id="humidity"> </span></li>
-                <li >Wind: <span id="wind-speed"> </span> </li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <h1 id="users-city" class="cities-name" ></h1>
-              <ul class="city-date">
-                <li class="day-of-the-week" id="current-time"></li>
-                <li id="description" class="day-of-the-week"></li>
-              </ul>
-            </div>
           </div>
+          <div class="col-3">
+            <ul class="pre-hum-wind">
+              <li>Humidity: <span id="humidity"> </span></li>
+              <li>Wind: <span id="wind-speed"> </span></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h1 id="users-city" class="cities-name"></h1>
+            <ul class="city-date">
+              <li class="day-of-the-week" id="current-time"></li>
+              <li id="description" class="day-of-the-week"></li>
+            </ul>
+          </div>
+        </div>
         <!--Second Row/Days of the week-->
         <div class="row">
           <div class="col-2"></div>
@@ -80,21 +75,17 @@
 
     <!--Images of the weather-->
 
-
-
-
-
     <!--Temp of the days -->
-
-
 
     <!--open source code-->
     <div class="open-source">
-    <p><a href="https://github.com/Pattiaramer/Weather-app-2021">Open-source code</a>, by Patti Araiza Merlin</p>
+      <p>
+        <a href="https://github.com/Pattiaramer/Weather-app-2021"
+          >Open-source code</a
+        >, by Patti Araiza Merlin
+      </p>
     </div>
 
-
-  <script src="src/index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
-
