@@ -29,19 +29,13 @@ h1 {
   max-width: 900px;
 }
 
-.current-location-button {
-  background-color: #1597e5;
-  color: #f7f6f2;
-  border: none;
-  border: 2px solid #1597e5;
-}
-
 .weather-icon {
   display: inline-block;
-  height: 60px;
-  margin-top: unset;
+  height: 100px;
+  margin-top: -24px;
+  margin-right: -20%;
   vertical-align: top;
-  width: 60px;
+  width: 100px;
 }
 .current-temp {
   color: #f7f6f2;
@@ -73,6 +67,9 @@ h1 {
 }
 
 .city-date {
+  color: #f0e5cf;
+  font-size: 16px;
+  line-height: 20px;
   display: inline-block;
   vertical-align: top;
   width: 95%;
@@ -86,13 +83,8 @@ h1 {
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
 
-.day-of-the-week {
-  color: #f0e5cf;
-  font-size: 16px;
-  line-height: 20px;
-}
-
 .open-source {
-  margin-left: 21%;
+  position: absolute;
+  margin: 30% 20%;
   color: #f7f6f2;
 }
