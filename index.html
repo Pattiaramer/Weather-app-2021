@@ -45,29 +45,21 @@
 
           <!--Top Row-->
           <div class="row">
-            <div class="col-3">
+            <div class="col-6 float-left">
               <div class="clearfix weather-teperature">
-                <div class="float-left">
-                  <img
-                    src="http://openweathermap.org/img/wn/10d@2x.png"
-                    alt="weather-icon"
-                    id="icon"
-                    class="float-left weather-icon"
-                  />
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt="weather-icon"
+                  id="icon"
+                  class="float-left weather-icon"
+                />
 
-                  <span class="current-temp" id="temp-num"></span
-                  ><span class="units"
-                    ><a href="#" id="celsius-link" class="active"> °C|</a
-                    ><a href="#" id="fahrenheit-link">°F</a></span
-                  >
-                </div>
+                <span class="current-temp" id="temp-num"></span
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active"> °C|</a
+                  ><a href="#" id="fahrenheit-link">°F</a></span
+                >
               </div>
-            </div>
-            <div class="col-3">
-              <ul class="pre-hum-wind">
-                <li>Humidity: <span id="humidity"> </span></li>
-                <li>Wind: <span id="wind-speed"> </span></li>
-              </ul>
             </div>
 
             <div class="col-6 float-right">
@@ -75,6 +67,14 @@
               <ul class="city-date">
                 <li id="current-time"></li>
                 <li id="description"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <ul class="pre-hum-wind">
+                <li class="p-w">Humidity: <span id="humidity"> </span></li>
+                <li class="p-w">Wind: <span id="wind-speed"> </span></li>
               </ul>
             </div>
           </div>

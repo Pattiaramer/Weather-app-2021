@@ -11,6 +11,10 @@ ul {
   list-style-type: none;
 }
 
+.p-w {
+  display: inline;
+}
+
 h1 {
   color: #f7f6f2;
   font-family: Google Sans, Roboto, arial, sans-serif;
@@ -25,7 +29,7 @@ h1 {
 }
 
 .weather-app-wrapper {
-  max-width: 900px;
+  max-width: 700px;
   margin: 25px auto;
 }
 
@@ -55,6 +59,7 @@ h1 {
   height: 100px;
   margin-top: -24px;
   margin-right: -20%;
+  margin-left: -8px;
   vertical-align: top;
   width: 100px;
 }
@@ -66,7 +71,7 @@ h1 {
   font-size: 44px;
   line-height: 48px;
   vertical-align: top;
-  margin-left: 25px;
+  margin-left: 65px;
 }
 
 .units {
@@ -82,10 +87,9 @@ h1 {
 .pre-hum-wind {
   color: rgb(178, 187, 194);
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
-  padding-top: 4px;
-  margin-left: -75px;
+  margin-left: -12px;
 }
 
 .city-date {
@@ -100,8 +104,9 @@ h1 {
 
 .cities-name {
   color: #f7f6f2;
-  font-size: 22px;
+  font-size: 28px;
   line-height: 26px;
+  margin-top: 3px;
   font-family: Google Sans, Roboto, arial, sans-serif;
 }
 
@@ -126,6 +131,6 @@ h1 {
 
 .open-source {
   position: relative;
-  margin: 15px 33%;
+  margin: 15px 28%;
   color: #f7f6f2;
 }
