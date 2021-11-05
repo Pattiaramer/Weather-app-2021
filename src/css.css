@@ -33,15 +33,15 @@ h1 {
   background-color: #4b6587;
   border: 2px solid #3d56b2;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .contaner-two {
   background-color: #4b6587;
   border: 2px solid #3d56b2;
-  padding: 15px;
+  padding: 0 5px 23px 5px;
   margin: 8px auto;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .weather-temperature img {
