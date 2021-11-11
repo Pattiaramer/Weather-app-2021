@@ -51,10 +51,10 @@ function displayForcast(response) {
                 />
                 <div class="weather-forcast-temperatures">
                   <span class="weather-forcast-temerature-max"> ${Math.round(
-                    (forecastDay.temp.max * 9) / 5 + 32
+                    forecastDay.temp.max
                   )}°</span>
                   <span class="weather-forcast-temperatures-min">${Math.round(
-                    (forecastDay.temp.min * 9) / 5 + 32
+                    forecastDay.temp.min
                   )}°</span>
                 </div>
               </div>
@@ -72,7 +72,7 @@ function displayForcast(response) {
 function getForcast(coordinates) {
   console.log(coordinates);
   let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForcast);
 }
@@ -82,10 +82,9 @@ function showWeather(response) {
 
   fahrenheitTemperature = response.data.main.temp;
 
-  let fahrenheit = (fahrenheitTemperature * 9) / 5 + 32;
-  //temperatureElement.innerHTML = Math.round(fahrenheit);
-
-  document.querySelector("#temp-num").innerHTML = Math.round(fahrenheit);
+  document.querySelector("#temp-num").innerHTML = Math.round(
+    fahrenheitTemperature
+  );
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -112,7 +111,7 @@ function showWeather(response) {
 
 function place(city) {
   let apiKey = "f3887e262c88d1158f7e2ef4998e234c";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
   axios.get(url).then(showWeather);
 }
