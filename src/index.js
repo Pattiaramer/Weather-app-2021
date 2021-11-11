@@ -51,10 +51,10 @@ function displayForcast(response) {
                 />
                 <div class="weather-forcast-temperatures">
                   <span class="weather-forcast-temerature-max"> ${Math.round(
-                    forecastDay.temp.max
+                    (forecastDay.temp.max * 9) / 5 + 32
                   )}°</span>
                   <span class="weather-forcast-temperatures-min">${Math.round(
-                    forecastDay.temp.min
+                    (forecastDay.temp.min * 9) / 5 + 32
                   )}°</span>
                 </div>
               </div>
@@ -80,10 +80,12 @@ function getForcast(coordinates) {
 function showWeather(response) {
   document.querySelector("#users-city").innerHTML = response.data.name;
 
-  celsiusTemperature = response.data.main.temp;
+  fahrenheitTemperature = response.data.main.temp;
 
-  document.querySelector("#temp-num").innerHTML =
-    Math.round(celsiusTemperature);
+  let fahrenheit = (fahrenheitTemperature * 9) / 5 + 32;
+  //temperatureElement.innerHTML = Math.round(fahrenheit);
+
+  document.querySelector("#temp-num").innerHTML = Math.round(fahrenheit);
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -121,35 +123,7 @@ function handleSubmit(event) {
   place(city);
 }
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temp-num");
-  // remove the active class the celsius link
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temp-num");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 place("New York");
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
-
-//Changing Celsius to Ferinheight
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
